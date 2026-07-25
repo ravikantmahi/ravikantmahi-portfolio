@@ -3,7 +3,7 @@
 # ============================================================
 
 # Firebase real credentials (NEVER commit these)
-firebase-config.js
+# firebase-config.js
 .env
 
 # Environment templates (safe to commit)
