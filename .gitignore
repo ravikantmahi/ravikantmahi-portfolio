@@ -2,14 +2,12 @@
 #  .gitignore — Ravi Kant Portfolio
 # ============================================================
 
-# Firebase real credentials (NEVER commit this)
+# Firebase real credentials (NEVER commit these)
 firebase-config.js
-
-# Environment files
 .env
-.env.local
-.env.production
-.env.development
+
+# Environment templates (safe to commit)
+# .env.example  ← intentionally NOT ignored
 
 # OS files
 .DS_Store
