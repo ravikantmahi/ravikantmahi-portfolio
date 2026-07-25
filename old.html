@@ -1,0 +1,1805 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary Meta Tags -->
+    <title>Ravi Kant | Web Developer & Graphics Designer | Portfolio</title>
+    <meta name="title" content="Ravi Kant | Web Developer & Graphics Designer | Portfolio" />
+    <meta name="description"
+        content="Portfolio of Ravi Kant, an MCA graduate blending robust architectural backend engineering with creative, highly immersive frontend experiences, AI, and Big Data systems." />
+    <meta name="keywords"
+        content="Ravi Kant, Web Developer, Graphics Designer, Software Developer, Full Stack Developer, React.js, Node.js, Python, Big Data, Data Science, Chandigarh, UI/UX" />
+    <meta name="author" content="Ravi Kant" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ravikantmahi.github.io/" />
+    <meta property="og:title" content="Ravi Kant | Web Developer & Graphics Designer | Portfolio" />
+    <meta property="og:description"
+        content="Portfolio of Ravi Kant, an MCA graduate blending robust architectural backend engineering with creative, highly immersive frontend experiences, AI, and Big Data systems." />
+    <meta property="og:image"
+        content="https://raw.githubusercontent.com/ravikantmahi/ravikant-portfolio/refs/heads/main/assets/myphoto.jpeg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://ravikantmahi.github.io/" />
+    <meta property="twitter:title" content="Ravi Kant | Web Developer & Graphics Designer | Portfolio" />
+    <meta property="twitter:description"
+        content="Portfolio of Ravi Kant, an MCA graduate blending robust architectural backend engineering with creative, highly immersive frontend experiences, AI, and Big Data systems." />
+    <meta property="twitter:image"
+        content="https://raw.githubusercontent.com/ravikantmahi/ravikant-portfolio/refs/heads/main/assets/myphoto.jpeg" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png"
+        href="https://raw.githubusercontent.com/ravikantmahi/ravikant-portfolio/refs/heads/main/assets/myphoto.jpeg">
+    <link rel="canonical" href="https://ravikantmahi.github.io/" />
+
+    <script src="https://kit.fontawesome.com/e674bba739.js" crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* --- CRIMSON SLATE VARIABLES --- */
+        :root {
+            --bg-deep: #0A0B0E;
+            --color-crimson: #B81B26;
+            --color-slate: #2A3B4F;
+            --color-cool-blue: #B0D0E8;
+            --color-gold: #F0D500;
+            --text-light: #FFFFFF;
+            --text-gray: #D0D0D8;
+            --primary: var(--color-crimson);
+            --secondary: var(--color-cool-blue);
+            --tertiary: var(--color-slate);
+            --accent: var(--color-gold);
+            --glass-bg: rgba(30, 40, 50, 0.6);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            --font-main: 'Outfit', sans-serif;
+            --font-code: 'Fira Code', monospace;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-main);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background: var(--bg-deep);
+        }
+
+        /* --- BACKGROUND ANIMATION --- */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            background: linear-gradient(-45deg, #0A0B0E, #14171c, #0A0B0E, #1e252e);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+
+        .blob {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.2;
+            z-index: -1;
+            animation: float 10s infinite ease-in-out alternate;
+        }
+
+        .blob-1 {
+            width: clamp(200px, 40vw, 400px);
+            aspect-ratio: 1/1;
+            background: var(--tertiary);
+            top: -10%;
+            left: -10%;
+        }
+
+        .blob-2 {
+            width: clamp(250px, 50vw, 500px);
+            aspect-ratio: 1/1;
+            background: var(--primary);
+            bottom: -15%;
+            right: -10%;
+            animation-delay: -5s;
+        }
+
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @keyframes float {
+            0% {
+                transform: translate(0, 0) scale(1);
+            }
+
+            100% {
+                transform: translate(30px, 50px) scale(1.1);
+            }
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        p {
+            color: var(--text-gray);
+            margin-bottom: 1rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        /* Fluid Container Padding */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 clamp(15px, 5vw, 20px);
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, var(--secondary), var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* --- BUTTONS --- */
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-family: var(--font-code);
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            text-align: center;
+            border: none;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            background: linear-gradient(90deg, var(--tertiary), var(--primary));
+            z-index: -1;
+            transition: var(--transition);
+        }
+
+        .btn:hover::before {
+            width: 100%;
+        }
+
+        .btn-outline {
+            border: 2px solid var(--primary);
+            color: var(--text-light);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            box-shadow: 0 0 20px rgba(184, 27, 38, 0.4);
+            border-color: transparent;
+        }
+
+        /* --- HEADER --- */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 80px;
+            background: rgba(10, 11, 14, 0.75);
+            backdrop-filter: blur(15px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--glass-border);
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .logo {
+            font-size: clamp(1.4rem, 4vw, 1.8rem);
+            font-weight: 800;
+            color: var(--text-light);
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 1.8rem;
+        }
+
+        .nav-menu a {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-light);
+            position: relative;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background: var(--secondary);
+            transition: var(--transition);
+        }
+
+        .nav-menu a:hover::after,
+        .nav-menu a.active::after {
+            width: 100%;
+        }
+
+        /* --- SECTIONS --- */
+        section {
+            padding: clamp(60px, 10vw, 120px) 0;
+            opacity: 0;
+            transform: translateY(40px);
+            transition: 0.8s ease-out;
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 5vw, 2.5rem);
+            margin-bottom: 20px;
+            display: inline-block;
+            position: relative;
+            text-align: left;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50%;
+            height: 4px;
+            background: var(--secondary);
+            border-radius: 2px;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 80px;
+            text-align: center;
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 900px;
+            gap: 20px;
+            width: 100%;
+        }
+
+        /* Fluid Image Container */
+        .hero-image-container {
+            position: relative;
+            margin-bottom: clamp(15px, 4vw, 30px);
+            display: flex;
+            justify-content: center;
+            border: 3px solid var(--tertiary);
+            padding: 8px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--bg-deep), var(--primary));
+            overflow: hidden;
+            width: 100%;
+            max-width: 320px;
+            aspect-ratio: 1 / 1;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: top center;
+        }
+
+        .hero-subtitle {
+            color: var(--secondary);
+            font-family: var(--font-code);
+            margin-bottom: 10px;
+            display: block;
+            font-size: clamp(0.85rem, 2.5vw, 1rem);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .hero-title {
+            font-size: clamp(35px, 8vw, 70px);
+            margin-bottom: 10px;
+            line-height: 1.1;
+            font-weight: 800;
+        }
+
+        .hero-typewriter {
+            font-size: clamp(20px, 5vw, 45px);
+            color: var(--color-cool-blue);
+            margin-bottom: 30px;
+            border-right: 3px solid var(--primary);
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typingCenter 3.5s steps(40, end), blink-caretCenter .75s step-end infinite;
+            display: inline-block;
+        }
+
+        @keyframes typingCenter {
+            from {
+                width: 0
+            }
+
+            to {
+                width: 100%
+            }
+        }
+
+        @keyframes blink-caretCenter {
+
+            from,
+            to {
+                border-color: transparent
+            }
+
+            50% {
+                border-color: var(--primary);
+            }
+        }
+
+        .hero-desc {
+            width: 100%;
+            max-width: 700px;
+            font-size: clamp(1rem, 3vw, 1.15rem);
+            margin-bottom: 30px;
+            color: var(--text-gray);
+            text-align: justify;
+            -webkit-hyphens: auto;
+            hyphens: auto;
+        }
+
+        .hero-badges {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .badge {
+            background: rgba(30, 40, 50, 0.4);
+            padding: 8px 15px;
+            border-radius: 25px;
+            border: 1px solid var(--glass-border);
+            font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+            color: var(--text-light);
+            font-weight: 600;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .badge i {
+            color: var(--secondary);
+        }
+
+        .badge:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 20px rgba(184, 27, 38, 0.5);
+            background: var(--primary);
+            border-color: transparent;
+        }
+
+        .badge:hover i {
+            color: #fff;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+        }
+
+        /* --- EXPERIENCE --- */
+        .timeline {
+            border-left: 3px solid var(--primary);
+            margin-left: clamp(10px, 3vw, 20px);
+            padding-left: clamp(20px, 5vw, 40px);
+            position: relative;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 50px;
+            background: var(--glass-bg);
+            padding: clamp(20px, 5vw, 30px);
+            border-radius: 15px;
+            border: 1px solid var(--glass-border);
+            transition: var(--transition);
+        }
+
+        .timeline-item:hover {
+            transform: translateX(10px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 30px rgba(184, 27, 38, 0.2);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: calc(clamp(20px, 5vw, 40px) * -1 - 9px);
+            top: 30px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--bg-deep);
+            border: 3px solid var(--primary);
+            box-shadow: 0 0 10px var(--primary);
+        }
+
+        .timeline-date {
+            font-family: var(--font-code);
+            font-size: 0.9rem;
+            color: var(--secondary);
+            margin-bottom: 10px;
+            display: inline-block;
+            background: rgba(30, 40, 50, 0.4);
+            padding: 4px 10px;
+            border-radius: 5px;
+        }
+
+        .timeline-title {
+            font-size: clamp(1.2rem, 3vw, 1.4rem);
+            color: var(--text-light);
+        }
+
+        .timeline-company {
+            font-size: 1.1rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .timeline-item p {
+            text-align: justify;
+            -webkit-hyphens: auto;
+            hyphens: auto;
+            font-size: clamp(0.95rem, 2vw, 1rem);
+        }
+
+        /* --- SKILLS: BENTO BOX LAYOUT --- */
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .bento-box {
+            background: rgba(20, 25, 35, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            padding: 35px 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .bento-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at top left, var(--box-color), transparent 70%);
+            opacity: 0.05;
+            z-index: 0;
+            pointer-events: none;
+            transition: var(--transition);
+        }
+
+        .bento-box:hover {
+            transform: translateY(-5px);
+            border-color: var(--box-color);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), 0 0 20px rgba(184, 27, 38, 0.05);
+        }
+
+        .bento-box:hover::before {
+            opacity: 0.15;
+        }
+
+        .bento-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            z-index: 1;
+        }
+
+        .bento-icon-wrapper {
+            width: 55px;
+            height: 55px;
+            border-radius: 16px;
+            background: rgba(10, 11, 14, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            color: var(--box-color);
+            box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.02);
+        }
+
+        .bento-header h3 {
+            font-size: clamp(1.2rem, 4vw, 1.4rem);
+            color: var(--text-light);
+            line-height: 1.2;
+            margin: 0;
+        }
+
+        .bento-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            z-index: 1;
+        }
+
+        .bento-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            font-family: var(--font-code);
+            color: var(--text-gray);
+            transition: var(--transition);
+            cursor: default;
+        }
+
+        .bento-pill i {
+            color: var(--tag-color);
+            font-size: 1.1rem;
+            transition: var(--transition);
+        }
+
+        .bento-pill:hover {
+            background: var(--tag-color);
+            color: #000;
+            font-weight: 600;
+            border-color: transparent;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .bento-pill:hover i {
+            color: #000;
+        }
+
+        .bento-pill[data-dark="true"]:hover {
+            color: #fff;
+        }
+
+        .bento-pill[data-dark="true"]:hover i {
+            color: #fff;
+        }
+
+        /* --- CERTIFICATES & PROJECTS GRIDS --- */
+        .cert-grid,
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .cert-card {
+            background: var(--glass-bg);
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid var(--glass-border);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cert-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 25px rgba(255, 255, 255, 0.05);
+        }
+
+        .cert-icon {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            flex-shrink: 0;
+        }
+
+        .cert-info h3 {
+            font-size: 1.15rem;
+            color: var(--text-light);
+            margin-bottom: 5px;
+            line-height: 1.3;
+        }
+
+        .cert-info p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            margin-bottom: 5px;
+        }
+
+        .cert-info span {
+            display: inline-block;
+            font-family: var(--font-code);
+            font-size: 0.8rem;
+            background: rgba(30, 40, 50, 0.3);
+            padding: 4px 10px;
+            border-radius: 5px;
+            color: var(--accent);
+        }
+
+        .project-category-title {
+            font-size: clamp(1.3rem, 4vw, 1.6rem);
+            color: var(--text-light);
+            margin: 60px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--glass-border);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .project-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 15px;
+            padding: clamp(20px, 5vw, 30px);
+            display: flex;
+            flex-direction: column;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, var(--color-hover) 0%, transparent 60%);
+            opacity: 0;
+            z-index: -1;
+            transition: opacity 0.4s ease;
+            pointer-events: none;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--color-hover);
+            box-shadow: 0 15px 35px rgba(10, 11, 14, 0.5);
+        }
+
+        .project-card:hover::before {
+            opacity: 0.15;
+        }
+
+        .project-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .project-icon {
+            font-size: 2.5rem;
+            color: var(--color-hover);
+        }
+
+        .project-links a {
+            color: var(--text-gray);
+            font-size: 1.4rem;
+            margin-left: 15px;
+            transition: var(--transition);
+        }
+
+        .project-links a:hover {
+            color: var(--color-hover);
+            transform: scale(1.1);
+            display: inline-block;
+        }
+
+        .project-title {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            color: var(--text-light);
+            line-height: 1.3;
+        }
+
+        .project-desc {
+            font-size: 0.95rem;
+            flex-grow: 1;
+            margin-bottom: 0;
+            color: var(--text-gray);
+            text-align: justify;
+            -webkit-hyphens: auto;
+            hyphens: auto;
+        }
+
+        .project-tech {
+            display: flex;
+            gap: 8px;
+            font-family: var(--font-code);
+            font-size: 0.75rem;
+            color: var(--color-hover);
+            margin-top: 25px;
+            flex-wrap: wrap;
+        }
+
+        .project-tech span {
+            background: rgba(30, 40, 50, 0.3);
+            padding: 5px 10px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* --- CONTACT SECTION --- */
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
+            gap: clamp(30px, 5vw, 50px);
+            background: var(--glass-bg);
+            padding: clamp(30px, 5vw, 50px);
+            border-radius: 20px;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            position: relative;
+            overflow: hidden;
+            margin-top: 40px;
+        }
+
+        .contact-container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(184, 27, 38, 0.08) 0%, transparent 60%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .contact-info,
+        .contact-form-wrapper {
+            z-index: 1;
+            position: relative;
+        }
+
+        .contact-info h3 {
+            font-size: clamp(1.8rem, 5vw, 2.2rem);
+            color: var(--text-light);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .contact-info p {
+            color: var(--text-gray);
+            font-size: clamp(0.95rem, 3vw, 1.05rem);
+            margin-bottom: 40px;
+            text-align: justify;
+            -webkit-hyphens: auto;
+            hyphens: auto;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .contact-item i {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: rgba(184, 27, 38, 0.1);
+            color: var(--primary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+            border: 1px solid rgba(184, 27, 38, 0.3);
+            transition: var(--transition);
+            flex-shrink: 0;
+        }
+
+        .contact-item:hover i {
+            background: var(--primary);
+            color: #fff;
+            box-shadow: 0 0 15px var(--primary);
+        }
+
+        .contact-item span {
+            color: var(--text-light);
+            font-weight: 600;
+            font-family: var(--font-code);
+            font-size: clamp(0.85rem, 3vw, 0.95rem);
+            word-break: break-all;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+        }
+
+        .input-group {
+            position: relative;
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+
+        .input-group i {
+            position: absolute;
+            left: 20px;
+            color: var(--secondary);
+            font-size: 1.1rem;
+            transition: var(--transition);
+            pointer-events: none;
+        }
+
+        .input-group.align-top i {
+            top: 22px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 18px 18px 18px 55px;
+            background: rgba(10, 11, 14, 0.6);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            color: var(--text-light);
+            font-family: var(--font-main);
+            font-size: 1rem;
+            transition: var(--transition);
+            box-sizing: border-box;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 20px rgba(184, 27, 38, 0.2);
+            background: rgba(10, 11, 14, 0.9);
+        }
+
+        .input-group:focus-within i {
+            color: var(--primary);
+            transform: scale(1.1);
+        }
+
+        /* --- FOOTER & NEW EMAIL LINK --- */
+        footer {
+            padding: 40px 20px;
+            text-align: center;
+            font-family: var(--font-code);
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            border-top: 1px solid var(--glass-border);
+            background: rgba(10, 11, 14, 0.5);
+            margin-top: 80px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .social-links a {
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: var(--glass-bg);
+            font-size: 1.3rem;
+            border: 1px solid var(--glass-border);
+            transition: var(--transition);
+            color: var(--text-light);
+        }
+
+        .social-links a:hover {
+            background: var(--primary);
+            color: #fff;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(184, 27, 38, 0.4);
+            border-color: transparent;
+        }
+
+        .footer-email {
+            margin-bottom: 25px;
+        }
+
+        .footer-email a {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--font-code);
+            color: var(--text-light);
+            font-size: 1.05rem;
+            transition: var(--transition);
+            font-weight: 600;
+        }
+
+        .footer-email a:hover {
+            color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        /* --- RESPONSIVE MOBILE MENU --- */
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.8rem;
+            color: var(--primary);
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background: rgba(10, 11, 14, 0.98);
+                padding: 30px;
+                text-align: center;
+                border-bottom: 1px solid var(--glass-border);
+                backdrop-filter: blur(20px);
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero-typewriter {
+                animation: none;
+                border-right: none;
+                white-space: normal;
+            }
+
+            .contact-info {
+                text-align: center;
+            }
+
+            .contact-details {
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .btn {
+                width: 100%;
+                margin-left: 0 !important;
+                margin-bottom: 10px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            .cert-card {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="bg-animation"></div>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo" aria-label="Ravi Kant Home">Ravi<span>Kant</span></a>
+            <div class="mobile-menu-btn" onclick="document.querySelector('.nav-menu').classList.toggle('active')"
+                aria-label="Toggle Navigation Menu" role="button" tabindex="0">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav class="nav-menu">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#skills">Stack</a>
+                <a href="#certificates">Certificates</a>
+                <a href="#valentine-projects">Interactive</a>
+                <a href="#projects">Portfolio</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="about" class="hero visible">
+            <div class="hero-content">
+                <div class="hero-image-container">
+                    <img src="https://raw.githubusercontent.com/ravikantmahi/ravikant-portfolio/refs/heads/main/assets/myphoto.jpeg"
+                        alt="Ravi Kant Portrait" class="hero-image">
+                </div>
+                <span class="hero-subtitle">Digital Architect | Hello, World! I am</span>
+                <h1 class="hero-title gradient-text">Ravi Kant.</h1>
+                <div class="hero-typewriter">Web Developer & Graphics Designer</div>
+                <p class="hero-desc">
+                    I am an MCA graduate blending robust architectural backend engineering with creative, highly
+                    immersive frontend experiences. From scalable data systems to sophisticated graphics and cinematic
+                    web interactions, I build digital assets that perform and captivate.
+                </p>
+                <div class="hero-badges">
+                    <span class="badge"><i class="fas fa-laptop-code"></i> Web Architecture</span>
+                    <span class="badge"><i class="fas fa-brain"></i> AI / ML Development</span>
+                    <span class="badge"><i class="fas fa-database"></i> Data Science & Engineering</span>
+                    <span class="badge"><i class="fas fa-palette"></i> Design Pro (Figma/Canva)</span>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#valentine-projects" class="btn"
+                        style="background: linear-gradient(135deg, var(--bg-deep), var(--color-cool-blue)); color: var(--bg-deep);">Interactive
+                        Series</a>
+                    <a href="#projects" class="btn btn-outline">Explore Full Portfolio</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2 class="section-title">Career Trajectory</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">Dec 2024 - Present</div>
+                    <h3 class="timeline-title">Project Assistant</h3>
+                    <div class="timeline-company">NIELIT Chandigarh / Ropar</div>
+                    <p>Facilitating bootcamps and training sessions focusing on Big Data and Data Science under the
+                        FutureSkills Prime initiative. Managing documentation, learning materials, and optimizing
+                        project delivery.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Aug 2024 - Present</div>
+                    <h3 class="timeline-title">Web Designer & Developer</h3>
+                    <div class="timeline-company">NP TechCrafters (Part-Time)</div>
+                    <p>Developing responsive, performance-optimized websites. Architecting dynamic UI components and
+                        ensuring flawless user experiences across modern browsers.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Aug 2024 - Sep 2024</div>
+                    <h3 class="timeline-title">Graphics Designer</h3>
+                    <div class="timeline-company">NIELIT Ropar</div>
+                    <p>Designed digital graphics using Canva and Figma. Ensured cohesive, highly professional, and
+                        modern aesthetics across multiple platforms.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Feb 2024 - Aug 2024</div>
+                    <h3 class="timeline-title">Frontend Development Intern</h3>
+                    <div class="timeline-company">C-DAC, Mohali</div>
+                    <p>Engineered front-end features using React.js and Node.js. Integrated educational tech by bringing
+                        modern web frameworks into Moodle-based platforms.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2 class="section-title">Core Tech Stack</h2>
+            <div class="bento-grid">
+                <div class="bento-box" style="--box-color: #00f2fe;">
+                    <div class="bento-header">
+                        <div class="bento-icon-wrapper"><i class="fas fa-layer-group"></i></div>
+                        <h3>Frontend & UI/UX</h3>
+                    </div>
+                    <div class="bento-tags">
+                        <span class="bento-pill" style="--tag-color: #E34F26;"><i class="fab fa-html5"></i> HTML5</span>
+                        <span class="bento-pill" style="--tag-color: #1572B6;"><i class="fab fa-css3-alt"></i>
+                            CSS3</span>
+                        <span class="bento-pill" style="--tag-color: #38B2AC;"><i class="fas fa-wind"></i>
+                            Tailwind</span>
+                        <span class="bento-pill" style="--tag-color: #7952B3;"><i class="fab fa-bootstrap"></i>
+                            Bootstrap</span>
+                        <span class="bento-pill" data-dark="true" style="--tag-color: #F7DF1E;"><i
+                                class="fab fa-js"></i> JavaScript (ES6)</span>
+                        <span class="bento-pill" data-dark="true" style="--tag-color: #61DAFB;"><i
+                                class="fab fa-react"></i> React.js</span>
+                        <span class="bento-pill" style="--tag-color: #646CFF;"><i class="fas fa-bolt"></i> Vite</span>
+                        <span class="bento-pill" data-dark="true" style="--tag-color: #A8B9CC;"><i
+                                class="fas fa-sitemap"></i> DOM Logic</span>
+                    </div>
+                </div>
+                <div class="bento-box" style="--box-color: #00ffaa;">
+                    <div class="bento-header">
+                        <div class="bento-icon-wrapper"><i class="fas fa-server"></i></div>
+                        <h3>Backend & Architecture</h3>
+                    </div>
+                    <div class="bento-tags">
+                        <span class="bento-pill" data-dark="true" style="--tag-color: #339933;"><i
+                                class="fab fa-node-js"></i> Node.js</span>
+                        <span class="bento-pill" style="--tag-color: #3776AB;"><i class="fab fa-python"></i>
+                            Python</span>
+                        <span class="bento-pill" style="--tag-color: #5382a1;"><i class="fab fa-java"></i> Java</span>
+                        <span class="bento-pill" style="--tag-color: #00f2fe;"><i class="fas fa-code"></i> C</span>
+                        <span class="bento-pill" data-dark="true" style="--tag-color: #4DB33D;"><i
+                                class="fas fa-database"></i> DBMS / RDBMS</span>
+                        <span class="bento-pill" style="--tag-color: #4479A1;"><i class="fas fa-table"></i> SQL /
+                            MySQL</span>
+                        <span class="bento-pill" data-dark="true" style="--tag-color: #47A248;"><i
+                                class="fas fa-leaf"></i> MongoDB</span>
+                    </div>
+                </div>
+                <div class="bento-box" style="--box-color: var(--primary);">
+                    <div class="bento-header">
+                        <div class="bento-icon-wrapper"><i class="fas fa-brain"></i></div>
+                        <h3>AI & Data Science</h3>
+                    </div>
+                    <div class="bento-tags">
+                        <span class="bento-pill" data-dark="true" style="--tag-color: #ff007f;"><i
+                                class="fas fa-robot"></i> Artificial Intelligence</span>
+                        <span class="bento-pill" data-dark="true" style="--tag-color: #ffae00;"><i
+                                class="fas fa-chart-bar"></i> Data Science</span>
+                        <span class="bento-pill" style="--tag-color: #00f2fe;"><i class="fas fa-network-wired"></i> Big
+                            Data</span>
+                    </div>
+                </div>
+                <div class="bento-box" style="--box-color: var(--accent);">
+                    <div class="bento-header">
+                        <div class="bento-icon-wrapper"><i class="fas fa-tools"></i></div>
+                        <h3>Ecosystem & Tools</h3>
+                    </div>
+                    <div class="bento-tags">
+                        <span class="bento-pill" style="--tag-color: #F05032;"><i class="fab fa-git-alt"></i> Git</span>
+                        <span class="bento-pill" data-dark="true" style="--tag-color: #ffffff;"><i
+                                class="fab fa-github"></i> GitHub</span>
+                        <span class="bento-pill" style="--tag-color: #007ACC;"><i class="fas fa-laptop-code"></i> VS
+                            Code</span>
+                        <span class="bento-pill" data-dark="true" style="--tag-color: #3DDC84;"><i
+                                class="fab fa-android"></i> Android</span>
+                        <span class="bento-pill" style="--tag-color: #21759b;"><i class="fab fa-wordpress"></i>
+                            WordPress</span>
+                        <span class="bento-pill" style="--tag-color: #F98012;"><i class="fas fa-graduation-cap"></i>
+                            Moodle LMS</span>
+                        <span class="bento-pill" data-dark="true" style="--tag-color: #00C4CC;"><i
+                                class="fas fa-paint-brush"></i> Canva</span>
+                        <span class="bento-pill" style="--tag-color: #F24E1E;"><i class="fab fa-figma"></i> Figma</span>
+                    </div>
+                </div>
+                <div class="bento-box" style="--box-color: #FFFFFF;">
+                    <div class="bento-header">
+                        <div class="bento-icon-wrapper"><i class="fas fa-users"></i></div>
+                        <h3>Interpersonal Skills</h3>
+                    </div>
+                    <div class="bento-tags">
+                        <span class="bento-pill" data-dark="true" style="--tag-color: #00f2fe;"><i
+                                class="fas fa-comments"></i> Technical Comm.</span>
+                        <span class="bento-pill" data-dark="true" style="--tag-color: #ff007f;"><i
+                                class="fas fa-handshake"></i> Agile Collab.</span>
+                        <span class="bento-pill" data-dark="true" style="--tag-color: #ffae00;"><i
+                                class="fas fa-lightbulb"></i> Problem Solving</span>
+                        <span class="bento-pill" style="--tag-color: #D83B01;"><i class="fas fa-clock"></i> Time
+                            Management</span>
+                        <span class="bento-pill" data-dark="true" style="--tag-color: #FFFFFF;"><i
+                                class="fas fa-sync-alt"></i> Perpetual Learning</span>
+                        <span class="bento-pill" data-dark="true" style="--tag-color: #00ffaa;"><i
+                                class="fas fa-palette"></i> Creative Thinking</span>
+                        <span class="bento-pill" style="--tag-color: #B81B26;"><i class="fas fa-tasks"></i> Project
+                            Mgmt</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="certificates">
+            <h2 class="section-title" style="color: var(--secondary);">Recognitions & Certifications</h2>
+            <div class="cert-grid">
+                <div class="cert-card" style="--color-hover: #00ffaa;">
+                    <i class="fas fa-trophy cert-icon"></i>
+                    <div class="cert-info">
+                        <h3>Best Poster Award (NICEDT-2025)</h3>
+                        <p>Springer & NIELIT Ropar (Malware Detection via DL)</p>
+                        <span>2025</span>
+                    </div>
+                </div>
+                <div class="cert-card" style="--color-hover: var(--primary);">
+                    <i class="fas fa-award cert-icon"></i>
+                    <div class="cert-info">
+                        <h3>Software Technologies Internship</h3>
+                        <p>C-DAC</p>
+                        <span>August 2024</span>
+                    </div>
+                </div>
+                <div class="cert-card" style="--color-hover: #00f2fe;">
+                    <i class="fas fa-laptop-code cert-icon"></i>
+                    <div class="cert-info">
+                        <h3>Web Development Internship</h3>
+                        <p>Code Alpha</p>
+                        <span>August 2023</span>
+                    </div>
+                </div>
+                <div class="cert-card" style="--color-hover: var(--accent);">
+                    <i class="fas fa-palette cert-icon"></i>
+                    <div class="cert-info">
+                        <h3>Website Design Internship</h3>
+                        <p>Internship Studio</p>
+                        <span>July 2023</span>
+                    </div>
+                </div>
+                <div class="cert-card" style="--color-hover: #00f2fe;">
+                    <i class="fas fa-certificate cert-icon"></i>
+                    <div class="cert-info">
+                        <h3>Website Design Training</h3>
+                        <p>Internship Studio</p>
+                        <span>July 2023</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="valentine-projects">
+            <h2 class="section-title" style="color: var(--primary);">Interactive Valentine's Showcase</h2>
+            <p
+                style="margin-bottom: 20px; font-size: clamp(1rem, 3vw, 1.1rem); max-width: 800px; text-align: justify; -webkit-hyphens: auto; hyphens: auto;">
+                A showcase of complex, deeply interactive micro-projects built from scratch. These assets combine
+                intricate JavaScript, immersive 3D WebGL (Three.js), and gamified UI mechanics.</p>
+            <div class="projects-grid">
+                <div class="project-card" style="--color-hover: var(--primary);">
+                    <div class="project-top">
+                        <i class="fas fa-magic project-icon"></i>
+                        <div class="project-links"><a href="https://ravikantmahi.github.io/Eternal-Rose-3d/"
+                                target="_blank" rel="noopener noreferrer" aria-label="Eternal Rose 3D Project"><i
+                                    class="fas fa-external-link-alt"></i></a></div>
+                    </div>
+                    <h3 class="project-title">Eternal Rose 3D 🌹</h3>
+                    <p class="project-desc">Browser 3D experience featuring procedurally generated velvet rose in a
+                        dynamic WebGL (Three.js) dome. Guides a dynamic fairy light illuminated real-time.</p>
+                    <div class="project-tech"><span>Three.js</span><span>WebGL</span><span>Shader</span></div>
+                </div>
+                <div class="project-card" style="--color-hover: var(--secondary);">
+                    <div class="project-top">
+                        <i class="fas fa-book-open project-icon"></i>
+                        <div class="project-links"><a href="https://ravikantmahi.github.io/The-Beautiful-Silence/"
+                                target="_blank" rel="noopener noreferrer"
+                                aria-label="Beautiful Silence Diary Project"><i
+                                    class="fas fa-external-link-alt"></i></a></div>
+                    </div>
+                    <h3 class="project-title">Beautiful Silence Diary</h3>
+                    <p class="project-desc">Cinematic 3D interactive diary with realistic physics of flipping pages and
+                        an immersive particle system (starfield) reactive to mouse movement.</p>
+                    <div class="project-tech"><span>3D Transforms</span><span>Three.js</span><span>Physics</span></div>
+                </div>
+                <div class="project-card" style="--color-hover: var(--accent);">
+                    <div class="project-top">
+                        <i class="fas fa-hands-helping project-icon"></i>
+                        <div class="project-links"><a href="https://ravikantmahi.github.io/Virtual-Hug-Card/"
+                                target="_blank" rel="noopener noreferrer" aria-label="Virtual Hug Card Project"><i
+                                    class="fas fa-external-link-alt"></i></a></div>
+                    </div>
+                    <h3 class="project-title">Virtual Hug Card 🫂</h3>
+                    <p class="project-desc">Gamified interface featuring runaway button, mood audio triggers, and an
+                        immersive "Hug Meter" that measures visitor interaction time.</p>
+                    <div class="project-tech"><span>Audio API</span><span>Events</span><span>Gamification</span></div>
+                </div>
+                <div class="project-card" style="--color-hover: #ff00ff;">
+                    <div class="project-top">
+                        <i class="fas fa-ring project-icon"></i>
+                        <div class="project-links"><a href="https://ravikantmahi.github.io/Promise-Day-Surprise/"
+                                target="_blank" rel="noopener noreferrer" aria-label="Promise Day Narrative Project"><i
+                                    class="fas fa-external-link-alt"></i></a></div>
+                    </div>
+                    <h3 class="project-title">Promise Day Narrative 🤞</h3>
+                    <p class="project-desc">Two-part experience with cursor landing page transitioning to visual novel
+                        with synchronized typewriter text and anime animations.</p>
+                    <div class="project-tech"><span>GSAP</span><span>Tailwind CSS</span><span>Vanilla JS</span></div>
+                </div>
+                <div class="project-card" style="--color-hover: #d2691e;">
+                    <div class="project-top">
+                        <i class="fas fa-cookie-bite project-icon"></i>
+                        <div class="project-links"><a href="https://ravikantmahi.github.io/Happy-Chocolate-Day/"
+                                target="_blank" rel="noopener noreferrer"
+                                aria-label="Happy Chocolate Challenge Project"><i
+                                    class="fas fa-external-link-alt"></i></a></div>
+                    </div>
+                    <h3 class="project-title">Happy Chocolate Challenge 🍫</h3>
+                    <p class="project-desc">Immersive challenge featuring drag-and-drop physics engine. Wrapper
+                        manipulation unlocks visual love notes on chocolate "consumption."</p>
+                    <div class="project-tech"><span>Drag API</span><span>Collision</span><span>Immersive UI</span></div>
+                </div>
+                <div class="project-card" style="--color-hover: #FFFFFF;">
+                    <div class="project-top">
+                        <i class="fas fa-envelope-open-text project-icon"></i>
+                        <div class="project-links"><a href="https://ravikantmahi.github.io/Vintage-Valentine-Letter/"
+                                target="_blank" rel="noopener noreferrer" aria-label="Vintage Letter Reveal Project"><i
+                                    class="fas fa-external-link-alt"></i></a></div>
+                    </div>
+                    <h3 class="project-title">Vintage Letter Reveal 💌</h3>
+                    <p class="project-desc">Nostalgic digital unboxing. Multi-step wax seal interaction unlocks complex
+                        styled leather envelope with parchment paper narrative.</p>
+                    <div class="project-tech"><span>CSS Folds</span><span>Interactive
+                            Z-Index</span><span>Typography</span></div>
+                </div>
+                <div class="project-card" style="--color-hover: var(--primary);">
+                    <div class="project-top">
+                        <i class="fas fa-heart-broken project-icon"></i>
+                        <div class="project-links"><a href="https://ravikantmahi.github.io/Be-My-Valentine-2/"
+                                target="_blank" rel="noopener noreferrer" aria-label="Impossible Proposal Project"><i
+                                    class="fas fa-external-link-alt"></i></a></div>
+                    </div>
+                    <h3 class="project-title">Impossible Proposal 💘</h3>
+                    <p class="project-desc">Technical dodge challenge (rejection button). Google Sheets API integration
+                        to log visitor confirmation results instantly to private sheet.</p>
+                    <div class="project-tech"><span>Sheets API</span><span>Apps Script</span><span>Fetch API</span>
+                    </div>
+                </div>
+                <div class="project-card" style="--color-hover: var(--primary);">
+                    <div class="project-top">
+                        <i class="fas fa-heart project-icon"></i>
+                        <div class="project-links"><a href="https://ravikantmahi.github.io/Be-My-Valentine/"
+                                target="_blank" rel="noopener noreferrer" aria-label="Growth Proposal Project"><i
+                                    class="fas fa-external-link-alt"></i></a></div>
+                    </div>
+                    <h3 class="project-title">Growth Proposal💘</h3>
+                    <p class="project-desc">Responsive proposal interface where the 'Yes' button grows on rejection
+                        attempts. Integrated LocalStorage for persistent tracking of proposal outcomes.</p>
+                    <div class="project-tech"><span>LocalStorage</span><span>Responsive Media</span><span>DOM</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2 class="section-title" style="color: var(--secondary);">Portfolio | Ravi Kant</h2>
+            <p
+                style="margin-bottom: 30px; font-size: clamp(1rem, 3vw, 1.1rem); max-width: 800px; text-align: justify; -webkit-hyphens: auto; hyphens: auto;">
+                Comprehensive development portfolio spanning data systems, React.js dashboards, and full-stack
+                architecture.</p>
+
+            <h3 class="project-category-title"><i class="fas fa-brain" style="color: var(--primary);"></i> AI, Data
+                Engineering, & Backend Architecture</h3>
+            <div class="projects-grid">
+                <div class="project-card" style="--color-hover: var(--primary);">
+                    <div class="project-top">
+                        <i class="fas fa-notes-medical project-icon"></i>
+                        <div class="project-links"><a href="#" aria-label="Diabetes Prediction Web App Project"><i
+                                    class="fas fa-external-link-alt"></i></a></div>
+                    </div>
+                    <h3 class="project-title">Diabetes Prediction Web App</h3>
+                    <p class="project-desc">Flask-based ML application using Random Forest Classifier.Predicts diabetes
+                        risk based on patient clinical metrics and includes robust visualization suite.</p>
+                    <div class="project-tech">
+                        <span>Python</span><span>Flask</span><span>Scikit-Learn</span><span>RandomForest</span>
+                    </div>
+                </div>
+                <div class="project-card" style="--color-hover: var(--secondary);">
+                    <div class="project-top">
+                        <i class="fas fa-weight project-icon"></i>
+                        <div class="project-links"><a href="#" aria-label="Weight Prediction Hub Project"><i
+                                    class="fas fa-external-link-alt"></i></a></div>
+                    </div>
+                    <h3 class="project-title">Weight Prediction Hub</h3>
+                    <p class="project-desc">Machine learning Flask web app predicting weight based on gender and height
+                        using Scikit-learn's Linear Regression models.</p>
+                    <div class="project-tech">
+                        <span>Python</span><span>Flask</span><span>Scikit-Learn</span><span>Regression</span>
+                    </div>
+                </div>
+                <div class="project-card" style="--color-hover: #00ffaa;">
+                    <div class="project-top">
+                        <i class="fas fa-seedling project-icon"></i>
+                        <div class="project-links"><a href="#" aria-label="Flower Classification AI Project"><i
+                                    class="fas fa-external-link-alt"></i></a></div>
+                    </div>
+                    <h3 class="project-title">Flower Classification AI</h3>
+                    <p class="project-desc">A classic supervised classification Flask application that identifies Iris
+                        flower species using Logistic Regression on sepal measurements. Hosted on Glitch.</p>
+                    <div class="project-tech"><span>Python</span><span>Logistic Regression</span><span>Flask</span>
+                    </div>
+                </div>
+                <div class="project-card" style="--color-hover: var(--primary);">
+                    <div class="project-top">
+                        <i class="fas fa-vial project-icon"></i>
+                        <div class="project-links"><a href="#" aria-label="Blood Bank Architecture Project"><i
+                                    class="fas fa-external-link-alt"></i></a></div>
+                    </div>
+                    <h3 class="project-title">Blood Bank Architecture</h3>
+                    <p class="project-desc">Web application enabling admins to manage blood inventory, donor databases,
+                        and critical operational metrics. Highly optimized for scalability.</p>
+                    <div class="project-tech">
+                        <span>Node.js</span><span>MongoDB</span><span>Express.js</span><span>Database Eng</span>
+                    </div>
+                </div>
+                <div class="project-card" style="--color-hover: var(--primary);">
+                    <div class="project-top">
+                        <i class="fas fa-mobile-alt project-icon"></i>
+                        <div class="project-links"><a
+                                href="https://play.google.com/store/apps/details?id=com.Project1.mygrocery&pcampaignid=web_share"
+                                target="_blank" rel="noopener noreferrer"
+                                aria-label="BI-Sathi Billing System Project"><i
+                                    class="fas fa-external-link-alt"></i></a></div>
+                    </div>
+                    <h3 class="project-title">BI-Sathi Billing System</h3>
+                    <p class="project-desc">Android billing and inventory management system for business. Integrated
+                        barcode scanning for live inventory tracking. Available on Play Store.</p>
+                    <div class="project-tech"><span>Java</span><span>Android
+                            Studio</span><span>Firebase</span><span>Firestore</span></div>
+                </div>
+                <div class="project-card" style="--color-hover: var(--accent);">
+                    <div class="project-top">
+                        <i class="fas fa-graduation-cap project-icon"></i>
+                        <div class="project-links"><a href="#" aria-label="Custom Moodle LMS Platform Project"><i
+                                    class="fas fa-external-link-alt"></i></a></div>
+                    </div>
+                    <h3 class="project-title">Custom Moodle LMS Platform</h3>
+                    <p class="project-desc">Integrated, modified, and customized Moodle framework to architect
+                        user-friendly learning management systems for educational efficiency.</p>
+                    <div class="project-tech"><span>Moodle LMS</span><span>PHP</span><span>MySQL</span><span>Custom
+                            Dev</span></div>
+                </div>
+            </div>
+
+            <h3 class="project-category-title"><i class="fab fa-react" style="color: var(--secondary);"></i> Advanced
+                React.js & Modern Frontend Suite</h3>
+            <div class="projects-grid">
+                <div class="project-card" style="--color-hover: var(--secondary);">
+                    <div class="project-top">
+                        <i class="fas fa-cloud-sun project-icon"></i>
+                        <div class="project-links"><a href="#" aria-label="React Weather Dashboard Project"><i
+                                    class="fas fa-external-link-alt"></i></a></div>
+                    </div>
+                    <h3 class="project-title">React Weather Dashboard</h3>
+                    <p class="project-desc">Highly responsive modern dashboard fetching real-time data and forecasts via
+                        standard OpenWeatherMap APIs. Built for rapid data processing.</p>
+                    <div class="project-tech"><span>React.js</span><span>Tailwind CSS</span><span>Axios</span><span>API
+                            Int</span></div>
+                </div>
+                <div class="project-card" style="--color-hover: var(--primary);">
+                    <div class="project-top">
+                        <i class="fas fa-shopping-bag project-icon"></i>
+                        <div class="project-links"><a href="https://ravikantmahi.github.io/E-Commerce/" target="_blank"
+                                rel="noopener noreferrer" aria-label="Responsive E-Commerce UI Project"><i
+                                    class="fas fa-external-link-alt"></i></a></div>
+                    </div>
+                    <h3 class="project-title">Responsive E-Commerce UI</h3>
+                    <p class="project-desc">Pixel-perfect e-commerce front-end interface clone, featuring complex JS
+                        sliders, filtering, and refined category grids.</p>
+                    <div class="project-tech"><span>Vanilla JS</span><span>Bootstrap 5</span><span>jQuery Slider</span>
+                    </div>
+                </div>
+                <div class="project-card" style="--color-hover: var(--accent);">
+                    <div class="project-top">
+                        <i class="fas fa-shopping-cart project-icon"></i>
+                        <div class="project-links"><a href="#" aria-label="JavaScript Cart Engine Project"><i
+                                    class="fas fa-external-link-alt"></i></a></div>
+                    </div>
+                    <h3 class="project-title">JavaScript Cart Engine</h3>
+                    <p class="project-desc">Advanced e-commerce interface focusing on data flow. Dynamic filtering of
+                        catalog, real-time cart state management, and refined UI logic.</p>
+                    <div class="project-tech"><span>Vanilla JS</span><span>Bootstrap</span><span>State Mgmt</span></div>
+                </div>
+                <div class="project-card" style="--color-hover: #00f2fe;">
+                    <div class="project-top">
+                        <i class="fas fa-stethoscope project-icon"></i>
+                        <div class="project-links"><a href="#" aria-label="Clinic Asset Dashboard Project"><i
+                                    class="fas fa-external-link-alt"></i></a></div>
+                    </div>
+                    <h3 class="project-title">Clinic Asset Dashboard</h3>
+                    <p class="project-desc">Modern React application integrated with advanced scheduling systems
+                        (Calendly API) and contact management solutions (FormSubmit).</p>
+                    <div class="project-tech"><span>React.js</span><span>Calendly API</span><span>Responsive Dev</span>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="project-category-title"><i class="fab fa-js-square" style="color: var(--color-gold);"></i>
+                Functional Engineering | Vanilla JS & Architecture</h3>
+            <div class="projects-grid">
+                <div class="project-card" style="--color-hover: var(--color-crimson);">
+                    <div class="project-top">
+                        <i class="fas fa-film project-icon"></i>
+                        <div class="project-links"><a href="https://ravikantmahi.github.io/Netflix-Home/"
+                                target="_blank" rel="noopener noreferrer"
+                                aria-label="Netflix Homepage Architecture Project"><i
+                                    class="fas fa-external-link-alt"></i></a></div>
+                    </div>
+                    <h3 class="project-title">Netflix Homepage Architecture</h3>
+                    <p class="project-desc">A complex reproduction of the Netflix home interface focusing on complex CSS
+                        states, media queries, and responsive grid patterns.</p>
+                    <div class="project-tech"><span>HTML5</span><span>CSS3</span><span>Advanced CSS States</span></div>
+                </div>
+                <div class="project-card" style="--color-hover: var(--secondary);">
+                    <div class="project-top">
+                        <i class="fas fa-wpforms project-icon"></i>
+                        <div class="project-links"><a href="https://ravikantmahi.github.io/Multi-Step-Form/"
+                                target="_blank" rel="noopener noreferrer"
+                                aria-label="Animated Multi-Step Engine Project"><i
+                                    class="fas fa-external-link-alt"></i></a></div>
+                    </div>
+                    <h3 class="project-title">Animated Multi-Step Engine</h3>
+                    <p class="project-desc">Refined JS-powered multi-step survey/form with smooth sliding transitions,
+                        dynamic progress tracking, and FormSubmit backend.</p>
+                    <div class="project-tech"><span>Vanilla JS</span><span>CSS Animations</span><span>UI Flows</span>
+                    </div>
+                </div>
+                <div class="project-card" style="--color-hover: #00f2fe;">
+                    <div class="project-top">
+                        <i class="fas fa-rocket project-icon"></i>
+                        <div class="project-links"><a href="https://ravikantmahi.github.io/Mars-Mission/"
+                                target="_blank" rel="noopener noreferrer" aria-label="ISRO Mars Tribute Hub Project"><i
+                                    class="fas fa-external-link-alt"></i></a></div>
+                    </div>
+                    <h3 class="project-title">ISRO Mars Tribute Hub</h3>
+                    <p class="project-desc">Informative asset showcasing Indian Space mission using semantic HTML and
+                        highly optimized responsive layout patterns.</p>
+                    <div class="project-tech"><span>HTML5</span><span>CSS3</span><span>Semantic HTML</span></div>
+                </div>
+                <div class="project-card" style="--color-hover: #FFFFFF;">
+                    <div class="project-top">
+                        <i class="fas fa-globe-americas project-icon"></i>
+                        <div class="project-links"><a href="https://ravikantmahi.github.io/Our-Earth/" target="_blank"
+                                rel="noopener noreferrer" aria-label="Geographic Information Portal Project"><i
+                                    class="fas fa-external-link-alt"></i></a></div>
+                    </div>
+                    <h3 class="project-title">Geographic Information Portal</h3>
+                    <p class="project-desc">Static web asset designed for informative data dissemination, leveraging
+                        semantic tables and organized spatial geographic facts.</p>
+                    <div class="project-tech"><span>HTML5</span><span>CSS Tables</span><span>Semantic HTML</span></div>
+                </div>
+                <div class="project-card" style="--color-hover: var(--primary);">
+                    <div class="project-top">
+                        <i class="fas fa-shield-alt project-icon"></i>
+                        <div class="project-links"><a
+                                href="https://ravikantmahi.github.io/INTEGRATE-CAPTCHA-WITH-AN-EXISTING-WEBSITE/"
+                                target="_blank" rel="noopener noreferrer"
+                                aria-label="Captcha Security Module Project"><i
+                                    class="fas fa-external-link-alt"></i></a></div>
+                    </div>
+                    <h3 class="project-title">Captcha Security Module</h3>
+                    <p class="project-desc">Full integration of captcha validation module for existing web forms.
+                        JS-powered logic generator and validation pattern.</p>
+                    <div class="project-tech"><span>JavaScript Logic</span><span>DOM Security</span><span>CSS3</span>
+                    </div>
+                </div>
+                <div class="project-card" style="--color-hover: var(--accent);">
+                    <div class="project-top">
+                        <i class="fas fa-stopwatch project-icon"></i>
+                        <div class="project-links"><a href="https://ravikantmahi.github.io/Stop-Watch/" target="_blank"
+                                rel="noopener noreferrer" aria-label="Functioning Stop-Watch Hub Project"><i
+                                    class="fas fa-external-link-alt"></i></a></div>
+                    </div>
+                    <h3 class="project-title">Functioning Stop-Watch Hub</h3>
+                    <p class="project-desc">Functional web timing asset with start, pause, lap-record, and reset logic.
+                        Optimal JavaScript execution of timing APIs.</p>
+                    <div class="project-tech"><span>Vanilla JS</span><span>Timing APIs</span><span>DOM Int</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2 class="section-title" style="text-align: center; width: 100%; margin-bottom: 40px;">Initialize
+                Connection</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Let's Build Something Brilliant.</h3>
+                    <p>Seeking technical synergy or freelance partnerships? Let's discuss AI, Data Systems, and
+                        professional Web Engineering. My transmission inbox is always active.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>ravikantmahi011@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Chandigarh, India</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" action="https://formsubmit.co/ravikantmahi011@gmail.com" method="POST">
+                        <div class="input-group">
+                            <i class="fas fa-user"></i>
+                            <input type="text" name="name" placeholder="Identity Code (Your Name)" required>
+                        </div>
+                        <div class="input-group">
+                            <i class="fas fa-at"></i>
+                            <input type="email" name="email" placeholder="Communication Hub (Your Email)" required>
+                        </div>
+                        <div class="input-group align-top">
+                            <i class="fas fa-comment-alt"></i>
+                            <textarea name="message" rows="5" placeholder="Operational Payload (Your Message)"
+                                required></textarea>
+                        </div>
+                        <input type="hidden" name="_captcha" value="false">
+                        <button type="submit" class="btn btn-outline"
+                            style="width: 100%; border-color: var(--primary); margin-top: 10px;">
+                            Transmit Data Packet <i class="fas fa-paper-plane" style="margin-left: 8px;"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/ravikantmahi/" target="_blank" rel="noopener noreferrer"
+                    class="social-btn" aria-label="LinkedIn Profile" title="LinkedIn"><i
+                        class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/Ravikantmahi" target="_blank" rel="noopener noreferrer" class="social-btn"
+                    aria-label="GitHub Profile" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.geeksforgeeks.org/profile/ravikantmahi" target="_blank" rel="noopener noreferrer"
+                    class="social-btn" aria-label="GeeksforGeeks Profile" title="GeeksforGeeks"><i
+                        class="fas fa-code"></i></a>
+                <a href="https://x.com/Ravikantmahi" target="_blank" rel="noopener noreferrer" class="social-btn"
+                    aria-label="X / Twitter Profile" title="X / Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://in.pinterest.com/ravikant_mahi/" target="_blank" rel="noopener noreferrer"
+                    class="social-btn" aria-label="Pinterest Profile" title="Pinterest"><i
+                        class="fab fa-pinterest"></i></a>
+                <a href="https://ravikantmahi.medium.com/" target="_blank" rel="noopener noreferrer" class="social-btn"
+                    aria-label="Medium Profile" title="Medium"><i class="fab fa-medium"></i></a>
+                <a href="https://www.instagram.com/ravikant.mahii" target="_blank" rel="noopener noreferrer"
+                    class="social-btn" aria-label="Instagram Profile" title="Instagram (Shayari)"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://www.reddit.com/user/ravikantmahi/" target="_blank" rel="noopener noreferrer"
+                    class="social-btn" aria-label="Reddit Profile" title="Reddit"><i class="fab fa-reddit"></i></a>
+                <a href="https://replit.com/@Ravikantmahi" target="_blank" rel="noopener noreferrer" class="social-btn"
+                    aria-label="Replit Profile" title="Replit"><i class="fas fa-laptop-code"></i></a>
+                <a href="https://www.kaggle.com/ravikantmahi" target="_blank" rel="noopener noreferrer"
+                    class="social-btn" aria-label="Kaggle Profile" title="Kaggle"><i class="fab fa-kaggle"></i></a>
+                <a href="https://huggingface.co/ravikantmahi" target="_blank" rel="noopener noreferrer"
+                    class="social-btn" aria-label="Hugging Face Profile" title="Hugging Face"><i
+                        class="fas fa-robot"></i></a>
+                <a href="https://about.me/ravikantmahi" target="_blank" rel="noopener noreferrer" class="social-btn"
+                    aria-label="About.me Profile" title="About.me"><i class="fas fa-id-card"></i></a>
+                <a href="mailto:ravikantmahi011@gmail.com" target="_blank" rel="noopener noreferrer" class="social-btn"
+                    aria-label="Send Email" title="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p>&copy; 2026 Ravi Kant. Handcrafted with clean code, thoughtful design, and modern web architecture.</p>
+        </div>
+    </footer>
+
+    <script>
+        const sections = document.querySelectorAll('section');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.12 });
+
+        sections.forEach(section => observer.observe(section));
+
+        const navLinks = document.querySelectorAll('.nav-menu a');
+        const navMenu = document.querySelector('.nav-menu');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (scrollY >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
