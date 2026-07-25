@@ -1008,15 +1008,10 @@
         import { getFirestore, doc, setDoc, addDoc, updateDoc, collection, onSnapshot, serverTimestamp, runTransaction, increment } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-firestore.js";
         import { getAuth, signInAnonymously, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-auth.js";
 
-        const firebaseConfig = {
-            apiKey: "AIzaSyDhgR4ZiaC10AG9m1zRTFb5bPBfGSi-6H4",
-            authDomain: "project-477af.firebaseapp.com",
-            projectId: "project-477af",
-            storageBucket: "project-477af.firebasestorage.app",
-            messagingSenderId: "175621815168",
-            appId: "1:175621815168:web:ad9903393a2dff409a1f65",
-            measurementId: "G-ZXL38WHT9G"
-        };
+        // Firebase credentials loaded from external config file (firebase-config.js)
+        // That file is listed in .gitignore and never pushed to GitHub.
+        // See firebase-config.example.js for the template.
+        import { firebaseConfig } from "./firebase-config.js";
 
         const app = initializeApp(firebaseConfig);
         getAnalytics(app);
